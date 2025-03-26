@@ -2,35 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Dashboard</title>
+    <title>Dashboard - BlogSphere</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <nav class="navbar">
-        <h1>Your Dashboard</h1>
-        <div class="nav-links">
-            <a href="editor.html">New Post</a>
-            <a href="#analytics">Analytics</a>
-            <button onclick="toggleDarkMode()">Dark Mode</button>
+        <div class="container">
+            <a href="/" class="brand">BlogSphere</a>
+            <div class="nav-links">
+                <a href="/editor.html">New Post</a>
+                <button onclick="toggleTheme()">🌓</button>
+            </div>
         </div>
     </nav>
 
-    <div class="dashboard-grid">
-        <!-- Analytics Card -->
-        <div class="card">
-            <h3>Blog Statistics</h3>
-            <div id="stats">
-                <p>Total Posts: <span id="postCount">0</span></p>
-                <p>Total Likes: <span id="likeCount">0</span></p>
-            </div>
-        </div>
-
-        <!-- Posts List -->
-        <div class="card">
-            <h3>Your Posts</h3>
-            <div id="postsContainer"></div>
-        </div>
-    </div>
+    <section class="dashboard container">
+        <h2>Your Posts</h2>
+        <div class="post-grid" id="postsGrid"></div>
+    </section>
 
     <script src="app.js"></script>
 </body>
