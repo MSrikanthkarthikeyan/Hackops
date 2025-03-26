@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <h1>Your Dashboard</h1>
+        <div class="nav-links">
+            <a href="editor.html">New Post</a>
+            <a href="#analytics">Analytics</a>
+            <button onclick="toggleDarkMode()">Dark Mode</button>
+        </div>
+    </nav>
+
+    <div class="dashboard-grid">
+        <!-- Analytics Card -->
+        <div class="card">
+            <h3>Blog Statistics</h3>
+            <div id="stats">
+                <p>Total Posts: <span id="postCount">0</span></p>
+                <p>Total Likes: <span id="likeCount">0</span></p>
+            </div>
+        </div>
+
+        <!-- Posts List -->
+        <div class="card">
+            <h3>Your Posts</h3>
+            <div id="postsContainer"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
