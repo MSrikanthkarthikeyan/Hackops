@@ -1,0 +1,72 @@
+:root {
+    --primary: #2c3e50;
+    --secondary: #3498db;
+    --light: #ffffff;
+    --dark: #2c3e50;
+    --background: #f8f9fa;
+}
+
+/* Dark Mode */
+[data-theme="dark"] {
+    --light: #2c3e50;
+    --dark: #ffffff;
+    --background: #1a1a1a;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--background);
+    color: var(--dark);
+    margin: 0;
+    transition: background 0.3s ease;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 5%;
+    background-color: var(--primary);
+    color: white;
+}
+
+.auth-container {
+    max-width: 400px;
+    margin: 5rem auto;
+    padding: 2rem;
+    background: var(--light);
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.dashboard-grid {
+    display: grid;
+    gap: 2rem;
+    padding: 2rem 5%;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.editor-container {
+    margin: 2rem 5%;
+    background: var(--light);
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.editor-content {
+    min-height: 60vh;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+}
