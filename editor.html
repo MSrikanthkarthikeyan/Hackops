@@ -2,25 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Post Editor</title>
+    <title>Editor - BlogSphere</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <nav class="navbar">
-        <h1>Post Editor</h1>
-        <div class="nav-links">
-            <button onclick="saveDraft()">Save Draft</button>
-            <button onclick="publishPost()">Publish</button>
+        <div class="container">
+            <a href="/" class="brand">BlogSphere</a>
+            <div class="nav-links">
+                <button onclick="saveDraft()">Save Draft</button>
+                <button onclick="publishPost()">Publish</button>
+            </div>
         </div>
     </nav>
 
-    <div class="editor-container">
-        <input type="text" id="postTitle" placeholder="Enter post title...">
-        <div class="tag-container">
-            <input type="text" id="postTags" placeholder="Add tags (comma separated)">
-        </div>
+    <main class="editor container">
+        <input type="text" id="postTitle" placeholder="Your post title...">
         <div class="editor-content" contenteditable="true"></div>
-    </div>
+    </main>
 
     <script src="app.js"></script>
 </body>
