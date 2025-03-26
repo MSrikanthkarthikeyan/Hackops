@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Post Editor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <h1>Post Editor</h1>
+        <div class="nav-links">
+            <button onclick="saveDraft()">Save Draft</button>
+            <button onclick="publishPost()">Publish</button>
+        </div>
+    </nav>
+
+    <div class="editor-container">
+        <input type="text" id="postTitle" placeholder="Enter post title...">
+        <div class="tag-container">
+            <input type="text" id="postTags" placeholder="Add tags (comma separated)">
+        </div>
+        <div class="editor-content" contenteditable="true"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
